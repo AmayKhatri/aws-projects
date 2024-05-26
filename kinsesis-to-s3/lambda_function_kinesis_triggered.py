@@ -19,7 +19,7 @@ def write_to_s3(records):
 
         # Store all records in S3
         s3_client.put_object(
-            Bucket='futurexskills',
+            Bucket='weather-data-kinesis',
             Key=key,
             Body=json.dumps(records)
         )
@@ -47,19 +47,23 @@ def lambda_handler(event, context):
 
                 # Parse JSON data
                 data = json.loads(decoded_data)
-
+                additional_data = data.get('additionalData')
+                
                 # Example: Extract relevant data
                 city = data.get('city', 'UnknownCity')
                 timestamp = data.get('timestamp', int(time.time()))
                 temperature = data.get('temperature', 0.0)
                 humidity = data.get('humidity', 0.0)
+                wind_speed = additional_data.get('wind speed', 0.0)
+                rainfall_probability = additional_data.get('rainfall_probability', 0.0)
 
                 # Format the data
                 record_data = {
                     'city': city,
                     'timestamp': timestamp,
                     'temperature': temperature,
-                    'humidity': humidity
+                    'humidity': humidity,
+                    'additionalData': { 'wind_speed': wind_speed, 'rainfall_probability': rainfall_probability}
                 }
 
                 # Append the record to the list
