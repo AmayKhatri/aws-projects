@@ -1,0 +1,19 @@
+{
+    "userId": "rohan",
+    "timezone": "Asia/Jerusalem",
+    "body": {
+        "event": {
+            "timestamp": "2024-05-28T14:00:00",
+            "description": "device info"
+        },
+        "device_information": [
+            {
+                "device_id": "TPA123",
+                "manufacturer": "apple",
+                "model_number": "S15",
+                "firmware_version": "ALL",
+                "device_type": "ipad"
+            }
+        ]
+    }
+}
