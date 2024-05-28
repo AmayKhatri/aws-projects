@@ -4,11 +4,11 @@ we will divide this project into 2 parts:
  1) storing device information data into dynamodb.
  2) streaming dynamodb data to kinesis data stream to kinesis fireshose and finally storing it into s3.
 
-THe architectural diagram is as follow:
+**THe architectural diagram is as follow:**
 
 ![sns-tos3](https://github.com/AmayKhatri/kinesis-mini-projects/assets/162054469/2e719a3c-1040-4a14-b281-c08ab46a2deb)
 
-Part 1. Storing device information data into dynamodb.
+**Part 1. Storing device information data into dynamodb.**
 
 1) Firstly create an sns topic.
 2) Create an IAM role and give the lambda, access to sns, dynamodb, cloudwatch etx.
@@ -19,7 +19,7 @@ Part 1. Storing device information data into dynamodb.
 
 Now the data should store in the dynamodb table.
 
-Part 2: Streaming dynamodb data to kinesis data stream to kinesis fireshose and finally storing it into s3.
+**Part 2: Streaming dynamodb data to kinesis data stream to kinesis fireshose and finally storing it into s3.**
 
 1) Create a Kinesis data stream.
 2) Create a S3 bucket
