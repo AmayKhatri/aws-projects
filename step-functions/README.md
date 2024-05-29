@@ -3,7 +3,7 @@ We will look at a small example of how step functions works with aws lambda func
 First we create a step function. Step functions are written in a language called as Amazon State Language (ASL). The state diagram is the visal representation
 of the code we write in ASL for our step function: 
 
-You can refer the code provided in the gist
+You can refer the code provided in the gist.  https://gist.github.com/AmayKhatri/112477253f0c8480e785965aaf1023a1
 
 State Diagram: 
 
@@ -11,7 +11,7 @@ State Diagram:
 
 Here, we have created to lambda functions, transactionPurchase and transactionRefund. 
 
-The code is provided inside the gist 
+The code is provided inside the gist.  https://gist.github.com/AmayKhatri/112477253f0c8480e785965aaf1023a1
 
 WHen the step function execution starts, it goes into a **choice state processTransaction**, then based on the input json provided, it checks the TransactionType. 
 
